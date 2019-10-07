@@ -1,0 +1,33 @@
+comandos:
+
+>> yarn init -y
+(cria o package.json)
+
+>> yarn add express
+(adiciona dependencia express)
+
+criar pasta src
+    - server.js
+
+>> node src/server.js
+(executa o servidor)
+
+>> yarn add nodemon -D
+(para rodar app em modo dev, depois dessa instalação...)
+
+adionar este trecho no package.json
+------------
+"scripts": {
+    "dev": "nodemon src/server.js"
+  },
+------------
+>> yarn dev
+(servidor executa comando configurado no package.json e passa 
+    a escutar alterações sem precisar reiniciar o servidor)
+
+req.query = acessar query params para filtrar (parametros na url)
+req.params.id = acessar route params para editar e deletar
+req.body = acessar corpo da requisição para criação e edicao de registros
+
+app.use(express.json());
+- informa a aplicacao que vai receber formato json
